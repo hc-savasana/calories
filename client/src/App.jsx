@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 
 import BMI from './components/BMI.jsx'
+import Header from './components/Header.jsx'
 import Home from './components/Home.jsx'
 import TotalCalories from './components/TotalCalories.jsx'
 import FoodSearch from './components/FoodSearch.jsx'
@@ -16,13 +17,16 @@ class App extends Component {
     }
     this.getData = this.getData.bind(this)
     this.postData = this.postData.bind(this)
+    // this.addEntry = this.addEntry.bind(this);
   }
 
   componentDidMount () {
     this.getData('/userInfo')
   }
 
-
+  // fetchData = async () => {
+  //   const response
+  // }
 
   getData (url = '') {
     return fetch(url)
@@ -59,6 +63,23 @@ class App extends Component {
       .catch(err => console.error(err))
   }
 
+  /*
+  addEntry(name, height, weight, gender) {
+    let { Info } = this.state;
+      const newItem = {
+        name,
+        height,
+        weight,
+        gender,
+      };
+    const existingIndex = Info.findIndex(
+      Info.push(newItem)
+      this.setState({
+        Info,
+      });
+    }
+
+*/
 
   render () {
     const { Info } = this.state
