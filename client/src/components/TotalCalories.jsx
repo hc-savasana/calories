@@ -54,7 +54,7 @@ class TotalCalories extends Component {
     return (
       <div>
         <Header />
-        <h1>Calories Needed: {int}</h1>
+        <h1>Calories Recommended Per Day: {int}</h1>
         <h1>Calories Eaten: {calories_eaten}</h1>
       </div>
     )
