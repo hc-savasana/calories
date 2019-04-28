@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Header from "./Header.jsx";
 import App from "../App.jsx";
 import { timingSafeEqual } from "crypto";
@@ -22,7 +21,7 @@ class BMI extends Component {
   this.handleSubmit = this.handleSubmit.bind(this);
   this.calculateBMI = this.calculateBMI.bind(this);
   this.identifyingClient = this.identifyingClient.bind(this);
-}
+  }
 
   handleInput(e) {
     const { target } = e;
@@ -178,8 +177,8 @@ render() {
         <br />
          <button class="input is-hovered" placeholder="Hovered input" onClick={ this.handleSubmit } >SUBMIT</button>
          </div>
-      </div>
-      </div>
+        </div>
+       </div>
       </section>
 
          <h1>Your BMI is: { this.state.BMI } </h1>
